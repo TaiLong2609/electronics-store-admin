@@ -15,8 +15,14 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    // Nới rộng tên linh kiện lên 1000 ký tự phòng hờ tụi Mouser đặt tên quá dài
+    @Column(length = 1000)
     private String name;
+    
     private Double price;
+    
+    // Ép kiểu LONGTEXT để chứa dữ liệu mô tả khổng lồ (bài toán Data truncation)
+    @Column(columnDefinition = "LONGTEXT")
     private String description;
 
     private String mpn;
