@@ -50,6 +50,12 @@ import java.util.List;
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
+/**
+ * Cấu hình bảo mật trung tâm của toàn bộ backend:
+ * - Khai báo quyền cho từng endpoint
+ * - Cấu hình JWT (decode/encode + authority mapping)
+ * - Cấu hình CORS cho frontend React
+ */
 public class SecurityConfig {
 
     @Bean
